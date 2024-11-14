@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="350">
+       <KeyFrameSet>
+           <KeyAttribute
+               motion:motionTarget="@+id/seekBar2"
+               motion:framePosition="15"
+               android:alpha="0" />
+           <KeyAttribute
+               motion:motionTarget="@+id/seekBar2"
+               motion:framePosition="100"
+               android:alpha="0" />
+           <KeyAttribute
+               motion:motionTarget="@+id/pauseButtonMain"
+               motion:framePosition="15"
+               android:alpha="0" />
+           <KeyAttribute
+               motion:motionTarget="@+id/pauseButtonMain"
+               motion:framePosition="100"
+               android:alpha="0" />
+           <KeyAttribute
+               motion:motionTarget="@+id/textView"
+               motion:framePosition="100"
+               android:alpha="0" />
+               android:alpha="0" />
+           <KeyAttribute
+               motion:motionTarget="@+id/textView3"
+               motion:framePosition="100"
+               android:alpha="1" />
+           <KeyAttribute
+               motion:motionTarget="@+id/textView"
+               motion:framePosition="30"
+               android:alpha="0" />
+           <KeyAttribute
+               motion:motionTarget="@+id/backwardButton"
+               motion:framePosition="100"
+               android:alpha="1" />
+       </KeyFrameSet>
+
+
+
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:layout_width="300dp"
+            android:layout_height="22dp"
+            motion:layout_editor_absoluteY="140dp"
+            motion:layout_editor_absoluteX="55dp"
+            android:id="@+id/seekBar"
+            motion:layout_constraintTop_toBottomOf="@+id/playerRoot"
+            android:layout_marginTop="8dp" />
+
+
+
+        <Constraint
+            android:alpha="0"
+            android:id="@+id/playerRoot"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="71dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:visibility="gone"
+            android:translationZ="0dp"
+            motion:layout_constraintStart_toStartOf="parent" />
+        <Constraint
+            android:alpha="0"
+            android:id="@+id/imageView5"
+            android:layout_width="55dp"
+
+            android:layout_height="55dp"
+            android:visibility="visible"
+            android:layout_marginStart="8dp"
+            motion:layout_constraintTop_toTopOf="@+id/playerRoot"
+            motion:layout_constraintStart_toStartOf="@+id/playerRoot"
+            android:layout_marginTop="4dp"
+            motion:layout_constraintBottom_toBottomOf="@+id/playerRoot"
+            android:layout_marginBottom="8dp"
+            android:translationZ="5dp" />
+        <Constraint
+            android:alpha="0"
+
+            android:id="@+id/seekBar2"
+            motion:layout_constraintEnd_toEndOf="@+id/playerRoot"
+            android:layout_width="0dp"
+            android:layout_height="10dp"
+            android:visibility="visible"
+            motion:layout_constraintStart_toStartOf="@+id/playerRoot"
+            motion:layout_constraintTop_toBottomOf="@+id/imageView5"
+            android:translationZ="5dp" />
+        <Constraint
+            android:alpha="0"
+
+            android:id="@+id/playerNameTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:layout_marginStart="8dp"
+            motion:layout_constraintTop_toTopOf="@+id/imageView5"
+            motion:layout_constraintStart_toEndOf="@+id/imageView5"
+            motion:layout_constraintEnd_toEndOf="@+id/pauseButtonMain"
+
+            android:translationZ="5dp" />
+        <Constraint
+            android:alpha="0"
+
+            android:id="@+id/playerAuthorTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            motion:layout_constraintTop_toBottomOf="@+id/playerNameTextView"
+            android:translationZ="5dp"
+            motion:layout_constraintStart_toStartOf="@+id/playerNameTextView" />
+        <Constraint
+            android:alpha="0"
+            android:id="@+id/pauseButtonMain"
+            motion:layout_constraintEnd_toEndOf="@+id/playerRoot"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:visibility="visible"
+            android:layout_marginEnd="12dp"
+            motion:layout_constraintTop_toTopOf="@+id/playerRoot"
+            motion:layout_constraintBottom_toBottomOf="@+id/playerRoot" />
+
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+
+
+        <Constraint
+            android:layout_width="320dp"
+            android:layout_height="320dp"
+            android:layout_marginStart="8dp"
+            android:clickable = "false"
+            android:focusable = "false"
+            android:translationZ="5dp"
+            motion:layout_constraintStart_toStartOf="@+id/playerRoot"
+            android:layout_marginTop="16dp"
+            android:id="@+id/imageView5"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toBottomOf="@+id/textView3" />
+        <Constraint
+            android:id="@+id/playerRoot"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="0dp" />
+        <Constraint
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+
+            android:id="@+id/playerNameTextView"
+            motion:layout_constraintStart_toStartOf="@+id/imageView5"
+            motion:layout_constraintStart_toEndOf="@+id/imageView5"
+            android:layout_marginStart="8dp"
+            motion:layout_constraintTop_toBottomOf="@+id/imageView5"
+            motion:layout_constraintEnd_toEndOf="@+id/imageView5"
+            android:layout_marginEnd="9dp"
+            android:layout_marginTop="8dp" />
+        <Constraint
+            android:id="@+id/seekBar"
+            android:layout_width="320dp"
+            android:layout_height="22dp"
+            motion:layout_constraintTop_toBottomOf="@id/playerAuthorTextView"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="50dp" />
+
+        <Constraint
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/playerNameTextView"
+            android:translationZ="5dp"
+            motion:layout_constraintStart_toStartOf="@+id/playerNameTextView"
+            android:id="@+id/playerAuthorTextView"
+            />
+        <Constraint
+
+            android:layout_height="75dp"
+            motion:layout_constraintStart_toStartOf="@+id/imageView5"
+            motion:layout_constraintEnd_toEndOf="@+id/imageView5"
+            motion:layout_constraintTop_toBottomOf="@id/seekBar"
+            android:layout_width="75dp"
+            android:id="@+id/pauseButton"
+            android:layout_marginTop="12dp" />
+        <Constraint
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/seekBar"
+            android:id="@+id/durationTextView"
+            motion:layout_constraintEnd_toEndOf="@+id/playerNameTextView" />
+        <Constraint
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/seekBar"
+            android:id="@+id/currentDurationTextView"
+            motion:layout_constraintStart_toStartOf="@+id/playerNameTextView" />
+        <Constraint
+            android:id="@+id/seekBar2"
+            android:layout_marginStart="-200dp"
+            motion:visibilityMode="ignore"
+            motion:layout_constraintStart_toEndOf="@id/playerRoot"
+            android:layout_width="0dp"
+            android:layout_height="10dp"
+            android:visibility="visible"
+            motion:layout_constraintStart_toStartOf="@+id/playerRoot"
+            motion:layout_constraintTop_toBottomOf="@+id/imageView5"
+            android:translationZ="5dp" />
+        <Constraint
+            android:id="@+id/pauseButtonMain"
+            motion:layout_constraintEnd_toEndOf="@+id/playerRoot"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:visibility="visible"
+            android:layout_marginEnd="-200dp"
+            motion:layout_constraintTop_toTopOf="@+id/playerRoot"
+            android:layout_marginTop="19dp"
+            motion:layout_constraintBottom_toTopOf="@+id/seekBar2" />
+
+
+    </ConstraintSet>
+</MotionScene>

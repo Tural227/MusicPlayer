@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:textSize="14sp"
+        android:id="@+id/notName"
+        android:text="MusicName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:layout_marginEnd="20dp"
+            android:id="@+id/notButton3"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/skipbck_vector"/>
+
+        <Button
+            android:id="@+id/notButton1"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/pauser"
+            />
+        <Button
+            android:layout_marginStart="20dp"
+            android:id="@+id/notButton2"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/skipfwd_vector"/>
+
+    </LinearLayout>
+
+</LinearLayout>
